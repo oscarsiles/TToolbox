@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="TToolbox.Views.StatusBarView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:cal="http://www.caliburnproject.org"
+             mc:Ignorable="d">
+    <StatusBar>
+        <StatusBarItem>
+            <TextBox x:Name="StatusLabel" Text="Label" VerticalAlignment="Top" HorizontalAlignment="Left" Background="{x:Null}" BorderBrush="{x:Null}" AllowDrop="False" Focusable="False" IsHitTestVisible="False" IsTabStop="False" />
+        </StatusBarItem>
+        <StatusBarItem HorizontalAlignment="Right">
+            <ProgressBar x:Name="CurrentProgress" Height="10" Width="100" SmallChange="1" />
+        </StatusBarItem>
+    </StatusBar>
+</UserControl>

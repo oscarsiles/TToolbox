@@ -1,0 +1,18 @@
+﻿<Window x:Class="TToolbox.Views.HistogramWinView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:oxy="clr-namespace:OxyPlot.Wpf;assembly=OxyPlot.Wpf"
+        Title="HistogramWinView" Height="600" Width="800" Icon="/TToolbox;component/toolbox.ico">
+    <Grid>
+        <oxy:PlotView x:Name="PlotView" Title="Histogram" IsLegendVisible="False" >
+            <!--Below is overwritten on window create-->
+            <oxy:PlotView.Axes>
+                <oxy:CategoryAxis Title="Pull-off force (nN)" ItemsSource="{Binding Path=Items}" LabelField="Label" IsPanEnabled="False" IsZoomEnabled="False"/>
+                <oxy:LinearAxis Title="Frequency" MinimumPadding="0" AbsoluteMinimum="0" IsPanEnabled="False" IsZoomEnabled="False"/>
+            </oxy:PlotView.Axes>
+            <oxy:PlotView.Series>
+                <oxy:ColumnSeries Title="Frequency" ItemsSource="{Binding Path=Items}" ValueField="Value1" />
+            </oxy:PlotView.Series>
+        </oxy:PlotView>
+    </Grid>
+</Window>

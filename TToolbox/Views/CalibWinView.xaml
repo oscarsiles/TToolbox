@@ -1,0 +1,12 @@
+﻿<Window x:Class="TToolbox.Views.CalibWinView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:oxy="http://oxyplot.org/wpf"
+        Title="Friction Calibration" Height="400" Width="768"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <oxy:PlotView x:Name="PlotView" Model="{Binding Path=PlotModel}" Title="{Binding Path=Filename}" Margin="10,10,10,40" BorderBrush="Black" BorderThickness="1" DefaultTrackerTemplate="{x:Null}" />
+        <Button x:Name="NextFile" Content="Next file" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" Width="75" />
+    </Grid>
+</Window>

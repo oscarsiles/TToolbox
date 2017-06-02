@@ -1,0 +1,38 @@
+<Window x:Class="TToolbox.ShellView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+        xmlns:cal="http://www.caliburnproject.org"
+        xmlns:local="clr-namespace:TToolbox"
+        Height="480" Width="720"
+        ResizeMode="NoResize" Icon="toolbox.ico"
+        Title="TToolbox">
+
+    <DockPanel Background="#FFF9F9F9">
+        <Menu DockPanel.Dock="Top" Background="{DynamicResource {x:Static SystemColors.MenuBarBrushKey}}">
+            <MenuItem Header="File" Margin="0,0,0,0">
+                <MenuItem x:Name="MenuExit" Header="Exit" />
+            </MenuItem>
+            <MenuItem Header="Help" HorizontalAlignment="Right">
+                <MenuItem x:Name="MenuAbout" Header="About..." />
+                <MenuItem x:Name="MenuOpenLog" Header="Open log file" />
+                <MenuItem x:Name="MenuCheckForUpdates" Header="Check for updates..." />
+            </MenuItem>
+        </Menu>
+        <ContentControl x:Name="StatusBar" DockPanel.Dock="Bottom" />
+        <TabControl Background="#FFF9F9F9">
+            <TabItem Header="AFM Tip">
+                <ContentControl x:Name="AfmTipTab" />
+            </TabItem>
+            <TabItem Header="Force">
+                <ContentControl x:Name="ForceTab" />
+            </TabItem>
+            <TabItem Header="Friction">
+                <ContentControl x:Name="FrictionTab" />
+            </TabItem>
+            <TabItem Header="Modelling">
+                <ContentControl x:Name="ModelTab" />
+            </TabItem>
+        </TabControl>
+    </DockPanel>
+</Window>

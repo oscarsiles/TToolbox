@@ -1,0 +1,12 @@
+﻿<Window x:Class="TToolbox.Views.LicencesWinView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:TToolbox.ViewModels"
+        Title="Licenses" Height="480" Width="720" ResizeMode="NoResize"
+        Icon="/TToolbox;component/toolbox.ico">
+    <Grid>
+        <WebBrowser x:Name="WebBrowser" 
+                    vm:WebBrowserUtility.BindableSource="{Binding Url}"
+                    ScrollViewer.HorizontalScrollBarVisibility="Disabled"/>
+    </Grid>
+</Window>
